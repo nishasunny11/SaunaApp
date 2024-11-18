@@ -1,0 +1,103 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's width/height */
+}
+
+/* Ensure the parent elements have a defined height */
+html, body {
+    height: 100%;
+    background-color: beige;
+    font-family: Arial, sans-serif;
+}
+
+#first_header {
+    color: black;
+    background-color: tomato;
+    text-align: center;
+    line-height: 2.5em;
+    font-size: 1.5em;
+    height: 10%;
+}
+
+#second_header {
+    color: tomato;
+    background-color: black;
+    text-align: center;
+    line-height: 2.5em;
+    font-size: 1.5em;
+    height: 10%;
+}
+
+h4 {
+    margin: 20px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#body {
+    display: flex;
+    justify-content: center; /* Center images horizontally */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+    background-color: beige; /* Fallback background color */
+}
+
+#body div {
+    text-align: center;
+}
+
+#body img {
+    width: 200px; /* Set consistent width */
+    height: 200px; /* Set consistent height */
+    object-fit: cover; /* Fill the dimensions without distortion */
+    border: 2px solid #ddd; /* Optional: Add a border */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+
+
+/* Media Queries */
+
+/* For tablets (landscape and portrait) */
+@media (max-width: 768px) {
+    #body {
+        flex-direction: row; /* Maintain row direction */
+        justify-content: space-around; /* Spread items evenly */
+    }
+
+    #body img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* For mobile devices (portrait) */
+@media (max-width: 480px) {
+    #body {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    #body img {
+        width: 100%; /* Make the images take full width */
+        max-width: 300px; /* Limit the maximum size */
+        height: auto; /* Adjust height to maintain aspect ratio */
+    }
+
+    h4 {
+        padding-left: 10%;
+        font-size: 1em;
+    }
+}
+
+/* For large desktops */
+@media (min-width: 1200px) {
+    #body img {
+        width: 250px;
+        height: 250px;
+    }
+}

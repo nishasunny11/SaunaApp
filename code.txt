@@ -1,0 +1,40 @@
+about us - 
+home -
+
+use canva vectors.
+platforms - should be icons.
+
+connect here -> change it to switch social.
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%; /* Ensure the parent elements have a defined height */
+    background-color: beige;
+}
+
+#first_header {
+    color: black;
+    background-color: tomato;
+    width: auto;
+    height: 10%; /* This will now work as intended */
+}
+
+#second_header {
+    color: tomato;
+    background-color: black;
+    width: auto;
+    height: 10%; /* This will also work as intended */
+}
+
+#body{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    top: 30%;
+    background-image: url("images/rose_image.jpg");
+
+}
