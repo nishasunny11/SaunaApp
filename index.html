@@ -48,6 +48,22 @@
             top: 10px;
             right: 20px;
         }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            color: white;
+            background-color: #333; /* Match background to blend */
+            font-size: 14px;
+            margin: 0; /* Remove default margin */
+            border: none; /* Remove any borders */
+        }
+
+        /* Responsive Design for Unwanted Divs */
+        @media screen and (max-width: 768px) {
+            #first_header, #second_header {
+                display: none; /* Hide unwanted headers */
+            }
+        }
     </style>
 </head>
 <body>
@@ -57,15 +73,15 @@
     <h4 style="padding-left: 6%; padding-top: 6%;">Products:</h4>
     <div id="body">
         <div>
-            <img src="rose 2.jpg" alt="A beautiful rose">
+            <img src="rose 2.jpg" alt="A beautiful red rose">
             <p style="text-align: center;"><strong>Red Rose</strong></p>
         </div>
         <div>
-            <img src="rose_image.jpg" alt="A beautiful rose">
+            <img src="rose_image.jpg" alt="A beautiful paneer rose">
             <p style="text-align: center;"><strong>Paneer Rose</strong></p>
         </div>
         <div>
-            <img src="roses-rose-flower-flowers-20664.jpg" alt="A beautiful rose">
+            <img src="roses-rose-flower-flowers-20664.jpg" alt="A beautiful button rose">
             <p style="text-align: center;"><strong>Button Rose</strong></p>
         </div>
     </div>
@@ -97,17 +113,16 @@
             <span class="close-button" id="closeReferModal">&times;</span>
             <h2>Refer and Earn</h2>
             <p>Invite your friends and earn 50 points for every referral!</p>
-            <a href="idex.html>"<button id="shareButton" style="background-color: #25D366; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            <a href="index.html"><button id="shareButton" style="background-color: #25D366; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
                 Share on WhatsApp
-            </button>
+            </button></a>
         </div>
     </div>
     <br/><br/>
-    <div id="second_header"></div>
     <div id="first_header">
-    <footer>
-        &copy; Copyrights Nisha S
-    </footer>
+        <footer>
+            &copy; Copyrights Nisha S
+        </footer>
     </div>
 
     <script>
