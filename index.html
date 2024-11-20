@@ -48,15 +48,18 @@
             top: 10px;
             right: 20px;
         }
-        footer {
+        
+        /* Footer and Header Styling */
+        .header, .footer {
             text-align: center;
-            padding: 10px 0;
             color: white;
-            background-color: tomato; /* Match background to blend */
-            font-size: 14px;
-            font-weight: bolder;
-            margin: 0; /* Remove default margin */
-            border: none; /* Remove any borders */
+            padding: 10px 0;
+        }
+        .header.black, .footer.black {
+            background-color: black;
+        }
+        .header.red, .footer.red {
+            background-color: tomato;
         }
 
         /* Responsive Design for Unwanted Divs */
@@ -68,8 +71,9 @@
     </style>
 </head>
 <body>
-    <div id="first_header">Sauna App</div>
-    <div id="second_header"></div>
+    <!-- Header -->
+    <div class="header black">Sauna App</div>
+    <div class="header red"></div>
 
     <h4 style="padding-left: 6%; padding-top: 6%;">Products:</h4>
     <div id="body">
@@ -119,13 +123,12 @@
             </button></a>
         </div>
     </div>
-    <br/><br/>
-    <div id="first_header">
+
+    <!-- Footer -->
+    <div class="footer black"></div>
+    <div class="footer red">
+        &copy; Copyrights Nisha S
     </div>
-        <footer>
-            &copy; Copyrights Nisha S
-        </footer>
-    
 
     <script>
         // Function to generate random points between 10 and 100
