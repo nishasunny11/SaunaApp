@@ -6,19 +6,90 @@
     <title>Project</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Header Styles */
+        #first_header {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically center-align items */
+    padding: 10px; /* Add padding around the content */
+    background-color: tomato; /* Background color for the header */
+    color:white; /* Add a border at the bottom */
+}
+
+#first_header img {
+    max-width: 50px; /* Ensure the logo is properly sized */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between logo and app name */
+}
+
+#first_header div {
+    font-size: 20px; /* Larger text for the app name */
+    font-weight: bold; /* Make it bold */
+    color: #333; /* Text color */
+}
+
+        /* Navigation Bar Styles */
+        #second_header {
+            text-align: center;
+            background-color: #000;
+            padding: 10px;
+        }
+
+        #second_header a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* General Section Styles */
+        h4 {
+            padding-left: 6%;
+            padding-top: 6%;
+        }
+
+        #body div {
+            text-align: center;
+            margin: 20px;
+        }
+
+        #body img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        #body p {
+            text-align: center;
+        }
+
+        /* Achievements and Refer Styles */
         #achievements, #referAndEarn {
             text-align: center;
             margin-top: 20px;
         }
+
         #achievements img, #referAndEarn img {
             max-width: 100px;
             height: auto;
             cursor: pointer;
         }
+
         #achievements p, #referAndEarn p {
             margin-top: 10px;
-            text-align: center;
         }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            color: white;
+            background-color: tomato;
+            font-size: 24px;
+            font-weight: bolder;
+            margin: 0;
+            border: none;
+        }
+
+        /* Modal Styles */
         .modal {
             display: none;
             position: fixed;
@@ -31,6 +102,7 @@
             justify-content: center;
             align-items: center;
         }
+
         .modal-content {
             background-color: white;
             padding: 20px;
@@ -40,6 +112,7 @@
             max-width: 400px;
             position: relative;
         }
+
         .close-button {
             color: red;
             font-size: 20px;
@@ -48,50 +121,41 @@
             top: 10px;
             right: 20px;
         }
-        
-        /* Footer and Header Styling */
-        .header, .footer {
-            text-align: center;
-            color: white;
-            padding: 10px 0;
-        }
-        .header.black, .footer.black {
-            background-color: black;
-        }
-        .header.red, .footer.red {
-            background-color: tomato;
-        }
-
-        /* Responsive Design for Unwanted Divs */
-        @media screen and (max-width: 768px) {
-            #first_header, #second_header {
-                display: none; /* Hide unwanted headers */
-            }
-        }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <div class="header black">Sauna App</div>
-    <div class="header red"></div>
+    <!-- Header Section -->
+    <div id="first_header">
+        <img src="logo1.png" alt="Sauna App Logo">
+        <div style="color: white">Blossom App</div>
+    </div>
 
-    <h4 style="padding-left: 6%; padding-top: 6%;">Products:</h4>
+    <!-- Navigation Bar -->
+    <div id="second_header">
+        <a href="#body">Products</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#referAndEarn">Refer and Earn</a>
+    </div>
+    
+    <!-- Products Section -->
+    <h4>Products:</h4>
     <div id="body">
         <div>
-            <img src="rose 2.jpg" alt="A beautiful red rose">
-            <p style="text-align: center;"><strong>Red Rose</strong></p>
+            <img src="pexels-hazardos-1324994.jpg" alt="A beautiful rose">
+            <p><strong>Red Rose</strong></p>
         </div>
         <div>
-            <img src="rose_image.jpg" alt="A beautiful paneer rose">
-            <p style="text-align: center;"><strong>Paneer Rose</strong></p>
+            <img src="pexels-inspiredimages-133472.jpg" alt="A beautiful rose">
+            <p><strong>Tulip</strong></p>
         </div>
         <div>
-            <img src="roses-rose-flower-flowers-20664.jpg" alt="A beautiful button rose">
-            <p style="text-align: center;"><strong>Button Rose</strong></p>
+            <img src="pexels-valeriya-14401.jpg" alt="A beautiful rose">
+            <p><strong>Bouquet</strong></p>
         </div>
     </div>
 
-    <h4 style="padding-left: 6%; padding-top: 6%;">Achievements</h4>
+    <!-- Achievements Section -->
+    <h4>Achievements</h4>
     <div id="achievements">
         <img src="trophy.png" alt="Trophy" id="trophyImage">
         <p>Click here to view points</p>
@@ -106,7 +170,8 @@
         </div>
     </div>
 
-    <h4 style="padding-left: 6%; padding-top: 6%;">Refer and Earn</h4>
+    <!-- Refer and Earn Section -->
+    <h4>Refer and Earn</h4>
     <div id="referAndEarn">
         <img src="whatsapp-logo.png" alt="WhatsApp" id="referImage">
         <p>Click here to share</p>
@@ -123,12 +188,11 @@
             </button></a>
         </div>
     </div>
-<br/> <br/> <br/>
+
     <!-- Footer -->
-    <div class="footer black"></div>
-    <div class="footer red">
+    <footer>
         &copy; Copyrights Nisha S
-    </div>
+    </footer>
 
     <script>
         // Function to generate random points between 10 and 100
@@ -185,7 +249,7 @@
 
         // Share on WhatsApp
         shareButton.addEventListener('click', () => {
-            const shareText = "Join Sauna App and earn rewards! Use my referral link: https://nishasunny11.github.io/SaunaApp/";
+            const shareText = "Join Blossom App and earn rewards! Use my referral link: https://nishasunny11.github.io/SaunaApp/";
             const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
             window.open(whatsappUrl, "_blank");
         });
